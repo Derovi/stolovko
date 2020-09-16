@@ -14,7 +14,18 @@ class View : public IView {
  public:
   View(HINSTANCE instance_handle_arg, int n_cmd_show);
 
-  void start(std::unique_ptr<IPresenter> presenter) override;
+  void queueUpdated(Queue *queue) override;
+  void nextClientSelected(Client *client) override;
+  void progressUpdated(double progress) override;
+  void clientServed(Client *client) override;
+
+ private:
+  static LRESULT MessagesHandler(
+      HWND window_handle, UINT message_code, WPARAM w_param, LPARAM l_param);
+
+  static HDC hdcBackground;
+
+  HINSTANCE instance_handle;
 };
 
 #endif   // VIEW_WAVIEW_H_

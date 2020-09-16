@@ -12,4 +12,4 @@ add_executable(labwp
         model/Client.cpp
         model/QueueIterator.cpp
         model/visitors/NextClientVisitor.cpp
-        model/visitors/FairNextClientVisitor.cpp)
+        model/visitors/FairNextClientVisitor.cpp presenter/Presenter.cpp presenter/Presenter.h Logger.cpp Logger.h)

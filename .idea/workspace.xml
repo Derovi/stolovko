@@ -12,81 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="661ab886-cb6d-4c32-b0e6-f125723d75fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/labwp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Context.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Context.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeRCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/Context.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/linklibs.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/main.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/model/Client.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/model/Model.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/model/Queue.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/model/QueueIterator.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/model/visitors/FairNextClientVisitor.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/model/visitors/NextClientVisitor.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/objects.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/objects1.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/labwp.dir/view/View.cpp.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/labwp.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/labwp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ipresenter/IPresenter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iview/IView.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Client.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Client.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Model.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Model.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Queue.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Queue.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/QueueIterator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/QueueIterator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/visitors/FairNextClientVisitor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/visitors/FairNextClientVisitor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/visitors/NextClientVisitor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/visitors/NextClientVisitor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/visitors/QueueVisitor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/View.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/View.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logger.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presenter/Presenter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presenter/Presenter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipresenter/IPresenter.h" beforeDir="false" afterPath="$PROJECT_DIR$/ipresenter/IPresenter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iview/IView.h" beforeDir="false" afterPath="$PROJECT_DIR$/iview/IView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/View.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/view/View.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/View.h" beforeDir="false" afterPath="$PROJECT_DIR$/view/View.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +74,8 @@
       <updated>1600191525205</updated>
       <workItem from="1600191526804" duration="7034000" />
       <workItem from="1600201769705" duration="4853000" />
+      <workItem from="1600215343094" duration="150000" />
+      <workItem from="1600251026325" duration="5680000" />
     </task>
     <servers />
   </component>
@@ -150,7 +87,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
