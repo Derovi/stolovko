@@ -16,6 +16,8 @@ class NextClientVisitor : public QueueVisitor {
   Client *GetCurrentClient() const;
   void SetCurrentClient(Client *current_client);
 
+  virtual ~NextClientVisitor() = default;
+
  private:
   Client* currentClient_;
   Client* nextClient_;

@@ -14,6 +14,8 @@ class IPresenter {
   virtual void update(int msecDelta) = 0;
 
   virtual void changeNextClientVisitor(NextClientVisitor* visitor) = 0;
+  virtual void cameDecent() = 0;
+  virtual void cameDisdecent() = 0;
 };
 
 #endif  // IPRESENTER_H_

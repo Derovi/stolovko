@@ -13,8 +13,16 @@ class Presenter : public IPresenter {
   void start() override;
   void update(int msecDelta) override;
   void changeNextClientVisitor(NextClientVisitor *visitor) override;
- private:
+  void cameDecent() override;
+  void cameDisdecent() override;
+  Presenter();
+  virtual ~Presenter();
 
+ private:
+  NextClientVisitor* next_client_visitor_;
+  Queue* queue_;
+  double progress;
+  Client* current;
 };
 
 #endif  // PRESENTER_H_

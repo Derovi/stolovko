@@ -2,7 +2,12 @@
 // Created by derovi on 9/15/2020.
 //
 
+#include <chrono>
 #include "View.h"
+#include "../Context.h"
+#include "../ipresenter/IPresenter.h"
+
+using namespace std::chrono;
 
 View::View(HINSTANCE instance_handle_arg, int n_cmd_show) {
   instance_handle = instance_handle_arg;
@@ -60,7 +65,8 @@ class MultipleLinesPainter {
     switch (message_code) {
       case WM_CREATE: {
         SetTimer(window_handle, TIMER_ID, 20 /* millis */, NULL);
-        Context::Get
+        Context::GetPresenter()->start();
+        lastUpdate = high_resolution_clock::now();
         break;
       }
       case WM_TIMER: {
@@ -88,6 +94,13 @@ class MultipleLinesPainter {
         return (LRESULT) 1;
       }
       case WM_PAINT: {
+        high_resolution_clock::time_point now = high_resolution_clock::now();
+
+        duration<double, std::milli> time_span = now - lastUpdate;
+        Context::GetPresenter()->update(time_span.count());
+
+        lastUpdate = now;
+
         PAINTSTRUCT ps;
 
         HDC hdc = BeginPaint(window_handle, &ps);
@@ -164,6 +177,7 @@ class MultipleLinesPainter {
 
  private:
   int TIMER_ID;
+  high_resolution_clock::time_point lastUpdate;
 };
 
 HDC View::hdcBackground = nullptr;
