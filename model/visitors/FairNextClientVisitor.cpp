@@ -5,6 +5,7 @@
 #include "FairNextClientVisitor.h"
 void FairNextClientVisitor::visit(Queue *queue) {
   if (queue->GetClients().empty()) {
+    SetNextClient(nullptr);
     return;
   }
   Client* current = GetCurrentClient();

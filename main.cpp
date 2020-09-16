@@ -9,7 +9,7 @@ int WinMain(HINSTANCE instance_handle_arg, HINSTANCE,
 
   Context::initModel();
   Context::initPresenter(std::unique_ptr<IPresenter>(new Presenter()));
-  Context::initView(std::unique_ptr<IView>(new View(
-      instance_handle_arg, n_cmd_show)));
-  return 0;
+  View* winApiView = new View();
+  Context::initView(std::unique_ptr<IView>(winApiView));
+  return winApiView->startView(instance_handle_arg, n_cmd_show);
 }

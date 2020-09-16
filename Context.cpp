@@ -12,6 +12,7 @@ void Context::initModel() {
 }
 
 void Context::initView(std::unique_ptr<IView> view) {
+  Logger::model("View inited");
   view_ = std::move(view);
 }
 

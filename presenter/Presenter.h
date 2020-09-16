@@ -15,6 +15,8 @@ class Presenter : public IPresenter {
   void changeNextClientVisitor(NextClientVisitor *visitor) override;
   void cameDecent() override;
   void cameDisdecent() override;
+
+  void chooseClient();
   Presenter();
   virtual ~Presenter();
 

@@ -12,7 +12,7 @@
 
 class View : public IView {
  public:
-  View(HINSTANCE instance_handle_arg, int n_cmd_show);
+  int startView(HINSTANCE instance_handle_arg, int n_cmd_show);
 
   void queueUpdated(Queue *queue) override;
   void nextClientSelected(Client *client) override;

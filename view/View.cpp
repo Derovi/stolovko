@@ -6,51 +6,9 @@
 #include "View.h"
 #include "../Context.h"
 #include "../ipresenter/IPresenter.h"
+#include "../Logger.h"
 
 using namespace std::chrono;
-
-View::View(HINSTANCE instance_handle_arg, int n_cmd_show) {
-  instance_handle = instance_handle_arg;
-
-  // Register the window class.
-  const char kClassName[] = "msg_server_class";
-  WNDCLASS window_class = {};
-  window_class.lpfnWndProc = MessagesHandler;
-  window_class.hInstance = instance_handle;
-  window_class.lpszClassName = kClassName;
-  window_class.hCursor = LoadCursor(nullptr, IDC_ARROW);
-  window_class.hbrBackground = GetStockBrush(WHITE_BRUSH);
-  RegisterClass(&window_class);
-
-  // Create the window.
-  HWND handle_of_window = CreateWindowEx(
-      /* dwExStyle =    */ 0,
-      /* lpClassName =  */ kClassName,
-      /* lpWindowName = */ "Stolovka",
-      /* dwStyle =      */ WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
-      /* X =            */ CW_USEDEFAULT,
-      /* Y =            */ CW_USEDEFAULT,
-      /* nWidth =       */ 1000,
-      /* nHeight =      */ 600,
-      /* hWndParent =   */ nullptr,
-      /* hMenu =        */ nullptr,
-      /* hInstance =    */ instance_handle,
-      /* lpParam =      */ nullptr
-  );
-  if (handle_of_window == nullptr) {
-    return;
-  }
-
-  // Show the window.
-  ShowWindow(handle_of_window, n_cmd_show);
-
-  // Run the message loop.
-  MSG message = {};
-  while (GetMessage(&message, nullptr, 0, 0)) {
-    TranslateMessage(&message);
-    DispatchMessage(&message);
-  }
-}
 
 class MultipleLinesPainter {
  public:
@@ -84,9 +42,10 @@ class MultipleLinesPainter {
         PAINTSTRUCT ps;
 
         HDC hdc = BeginPaint(window_handle, &ps);
-        if (w_param == VK_LEFT) {
-        } else if (w_param == VK_RIGHT) {
-
+        if (w_param == 107) {
+          Context::GetPresenter()->cameDecent();
+        } else if (w_param == 109) {
+          Context::GetPresenter()->cameDisdecent();
         }
         break;
       }
@@ -188,15 +147,60 @@ LRESULT View::MessagesHandler(
   return multiple_lines_painter.Handle(
       window_handle, message_code, w_param, l_param);
 }
-void View::queueUpdated(Queue *queue) {
 
+int View::startView(HINSTANCE instance_handle_arg, int n_cmd_show) {
+  instance_handle = instance_handle_arg;
+
+  // Register the window class.
+  const char kClassName[] = "msg_server_class";
+  WNDCLASS window_class = {};
+  window_class.lpfnWndProc = MessagesHandler;
+  window_class.hInstance = instance_handle;
+  window_class.lpszClassName = kClassName;
+  window_class.hCursor = LoadCursor(nullptr, IDC_ARROW);
+  window_class.hbrBackground = GetStockBrush(WHITE_BRUSH);
+  RegisterClass(&window_class);
+
+  // Create the window.
+  HWND handle_of_window = CreateWindowEx(
+      /* dwExStyle =    */ 0,
+      /* lpClassName =  */ kClassName,
+      /* lpWindowName = */ "Stolovka",
+      /* dwStyle =      */ WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
+      /* X =            */ CW_USEDEFAULT,
+      /* Y =            */ CW_USEDEFAULT,
+      /* nWidth =       */ 1000,
+      /* nHeight =      */ 600,
+      /* hWndParent =   */ nullptr,
+      /* hMenu =        */ nullptr,
+      /* hInstance =    */ instance_handle,
+      /* lpParam =      */ nullptr
+  );
+  if (handle_of_window == nullptr) {
+    return -1;
+  }
+
+  // Show the window.
+  ShowWindow(handle_of_window, n_cmd_show);
+
+  // Run the message loop.
+  MSG message = {};
+  while (GetMessage(&message, nullptr, 0, 0)) {
+    TranslateMessage(&message);
+    DispatchMessage(&message);
+  }
+  return 0;
+}
+
+void View::queueUpdated(Queue *queue) {
+  Logger::view("queue updated");
 }
 void View::nextClientSelected(Client *client) {
-
+  Logger::view("client selected: " + std::to_string(client->GetIndex()));
 }
 void View::progressUpdated(double progress) {
-
+  Logger::view("progress updated: " + std::to_string(progress));
 }
 void View::clientServed(Client *client) {
-
+  Logger::view("client served: " + std::to_string(client->GetIndex()));
 }

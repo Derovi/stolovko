@@ -23,5 +23,5 @@ Queue::~Queue() {
   }
 }
 void Queue::addClient(bool decent) {
-  clients_.insert(new Client(decent, ++lastIndex_));
+  clients_.insert(new Client(++lastIndex_, decent));
 }
