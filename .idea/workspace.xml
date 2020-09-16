@@ -12,13 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="661ab886-cb6d-4c32-b0e6-f125723d75fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/view/MessageHandler.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/MessageHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Visualization.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Visualization.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Context.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Context.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Queue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/Queue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/visitors/FairNextClientVisitor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/visitors/FairNextClientVisitor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/Presenter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/Presenter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presenter/Presenter.h" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/Presenter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/View.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/view/View.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/View.h" beforeDir="false" afterPath="$PROJECT_DIR$/view/View.h" afterDir="false" />
     </list>
@@ -89,6 +88,7 @@
       <workItem from="1600201769705" duration="4853000" />
       <workItem from="1600215343094" duration="150000" />
       <workItem from="1600251026325" duration="10454000" />
+      <workItem from="1600293646444" duration="3593000" />
     </task>
     <servers />
   </component>
