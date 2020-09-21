@@ -16,7 +16,7 @@ void Presenter::update(int msecDelta) {
     chooseClient();
     return;
   }
-  progress += msecDelta / 1000.0;
+  progress += msecDelta / 3000.0;
   if (progress > 1) {
     Context::GetView()->clientServed(current);
     queue_->removeClient(current);

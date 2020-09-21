@@ -48,6 +48,8 @@ void Visualization::update(HWND hwnd, HDC hdc, int msecDelta) {
         SelectObject(hdc, redPen);
       }
       Ellipse(hdc, x - 20, y - 20, x + 20, y + 20);
+      std::wstring text = std::to_wstring(client->GetIndex());
+      TextOutW(hdc, x - 5 * text.size(), y - 7, text.c_str(), lstrlenW(text.c_str()));
       ++iterator;
       ++index;
     }

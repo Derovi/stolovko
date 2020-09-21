@@ -23,7 +23,7 @@ void LazyNextClientVisitor::visit(const Queue *queue) {
   SetNextClient(next);
 }
 
-bool operator<(const Client &first, const Client &second) {
+bool operator<(const Client &second, const Client &first) {
   if (first.isDecent() && !second.isDecent()) {
     return true;
   } else
