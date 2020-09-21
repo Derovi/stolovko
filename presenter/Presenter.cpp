@@ -39,8 +39,9 @@ void Presenter::chooseClient() {
 }
 
 void Presenter::changeNextClientVisitor(NextClientVisitor *visitor) {
-
+  next_client_visitor_ = visitor;
 }
+
 Presenter::~Presenter() {
   delete next_client_visitor_;
   delete queue_;

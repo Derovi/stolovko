@@ -3,14 +3,13 @@
 //
 
 #include "LazyNextClientVisitor.h"
-#include "../../Logger.h"
+
 void LazyNextClientVisitor::visit(const Queue *queue) {
   if (queue->GetClients().empty()) {
     SetNextClient(nullptr);
     return;
   }
   Client* current = GetCurrentClient();
-  /// todo optimize
   Client* next = nullptr;
   for (Client* client : queue->GetClients()) {
     if (client == current || (current != nullptr && *client < *current)) {

@@ -18,6 +18,10 @@ class Visualization {
   void progressUpdated(double progress);
   void clientServed(const Client *client);
 
+  void changeVisitor();
+  NextClientVisitor *GetCurrentVisitor() const;
+  int GetCurrentVisitorNumber() const;
+
  private:
   const Queue* queue_;
   const Client* currentClient_;

@@ -3,14 +3,13 @@
 //
 
 #include "FairNextClientVisitor.h"
-#include "../../Logger.h"
+
 void FairNextClientVisitor::visit(const Queue *queue) {
   if (queue->GetClients().empty()) {
     SetNextClient(nullptr);
     return;
   }
   Client* current = GetCurrentClient();
-  /// todo optimize
   Client* next = nullptr;
   for (Client* client : queue->GetClients()) {
     if (current != nullptr && client->GetIndex() <= current->GetIndex()) {

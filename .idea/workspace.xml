@@ -13,9 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="661ab886-cb6d-4c32-b0e6-f125723d75fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/visitors/FairNextClientVisitor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/visitors/FairNextClientVisitor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/visitors/LazyNextClientVisitor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/visitors/LazyNextClientVisitor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presenter/Presenter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/presenter/Presenter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/MessageHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/view/MessageHandler.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Visualization.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/view/Visualization.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Visualization.h" beforeDir="false" afterPath="$PROJECT_DIR$/view/Visualization.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +95,7 @@
       <workItem from="1600251026325" duration="10454000" />
       <workItem from="1600293646444" duration="6043000" />
       <workItem from="1600456760522" duration="506000" />
-      <workItem from="1600708799326" duration="5850000" />
+      <workItem from="1600708799326" duration="7777000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@
 //
 
 #include "MessageHandler.h"
+#include "../Logger.h"
+
 LRESULT MessageHandler::Handle(HWND window_handle,
                                UINT message_code,
                                WPARAM w_param,
@@ -34,8 +36,10 @@ LRESULT MessageHandler::Handle(HWND window_handle,
         Context::GetPresenter()->cameDecent();
       } else if (w_param == 109) {
         Context::GetPresenter()->cameDisdecent();
+      } else if (w_param == 37 || w_param == 39) {
+        visualization_->changeVisitor();
+        Context::GetPresenter()->changeNextClientVisitor(visualization_->GetCurrentVisitor());
       }
-      break;
     }
     case WM_ERASEBKGND: {
       return (LRESULT) 1;
@@ -77,6 +81,9 @@ LRESULT MessageHandler::Handle(HWND window_handle,
       int height = rect.bottom - rect.top;
 
       std::wstring text = L"Обслуживает честный кассир!";
+      if (visualization_->GetCurrentVisitorNumber() == 1) {
+        text = L"Обслуживает ленивый кассир!";
+      }
       TextOutW(hdc, width / 2 - 3 * lstrlenW(text.c_str()), 20, text.c_str(),
                lstrlenW(text.c_str()));
 
