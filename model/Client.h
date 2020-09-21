@@ -10,7 +10,7 @@ class Client {
  public:
   Client(int index, bool decent);
   int GetIndex() const;
-  bool isDecent();
+  bool isDecent() const;
 
  private:
   int index_;

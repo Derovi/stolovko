@@ -6,13 +6,19 @@
 #include <iostream>
 
 void Logger::presenter(const std::string& message) {
-  std::cout << "Presenter << " <<  message << std::endl;
+  if (enabled) {
+    std::cout << "Presenter << " << message << std::endl;
+  }
 }
 
 void Logger::model(const std::string& message) {
-  std::cout << "Model << " << message << std::endl;
+  if (enabled) {
+    std::cout << "Model << " << message << std::endl;
+  }
 }
 
 void Logger::view(const std::string& message) {
-  std::cout << "View << " <<  message << std::endl;
+  if (enabled) {
+    std::cout << "View << " << message << std::endl;
+  }
 }

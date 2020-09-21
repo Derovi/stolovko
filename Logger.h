@@ -9,6 +9,8 @@
 
 class Logger {
  public:
+  static const bool enabled = true;
+
   static void presenter(const std::string& message);
   static void model(const std::string& message);
   static void view(const std::string& message);

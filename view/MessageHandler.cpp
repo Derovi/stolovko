@@ -41,7 +41,6 @@ LRESULT MessageHandler::Handle(HWND window_handle,
       return (LRESULT) 1;
     }
     case WM_PAINT: {
-      InvalidateRect(window_handle, nullptr, true);
       std::chrono::high_resolution_clock::time_point now = std::chrono::high_resolution_clock::now();
 
       std::chrono::duration<double, std::milli> time_span = now - lastUpdate;
@@ -53,9 +52,14 @@ LRESULT MessageHandler::Handle(HWND window_handle,
 
       HDC hdc = BeginPaint(window_handle, &ps);
 
+      HBRUSH brush = CreateSolidBrush(RGB(255,255,255));
+      SelectObject(hdc, brush);
+      Rectangle(hdc, 0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN));
+
       SelectObject(hdc, GetStockObject(HOLLOW_BRUSH));
 
       visualization_->update(window_handle, hdc, time_span.count());
+
 
       // draw text
       DWORD color = GetSysColor(COLOR_BTNFACE);

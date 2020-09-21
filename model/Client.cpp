@@ -4,7 +4,7 @@
 
 #include "Client.h"
 
-bool Client::isDecent() {
+bool Client::isDecent() const {
   return decent_;
 }
 Client::Client(int index, bool decent) : index_(index), decent_(decent) {}
