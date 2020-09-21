@@ -17,10 +17,10 @@ class View : public IView {
  public:
   int startView(HINSTANCE instance_handle_arg, int n_cmd_show);
 
-  void queueUpdated(Queue *queue) override;
-  void nextClientSelected(Client *client) override;
+  void queueUpdated(const Queue *queue) override;
+  void nextClientSelected(const Client *client) override;
   void progressUpdated(double progress) override;
-  void clientServed(Client *client) override;
+  void clientServed(const Client *client) override;
   const std::unique_ptr<Visualization> &GetVisualization() const;
   static std::unique_ptr<MessageHandler> messageHandler;
 

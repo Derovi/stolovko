@@ -4,10 +4,15 @@
 
 #include <windef.h>
 #include "Visualization.h"
+#include "../model/QueueIterator.h"
+#include "../model/visitors/FairNextClientVisitor.h"
+#include "../Logger.h"
 #include <windows.h>
 
 Visualization::Visualization() {
-
+  currentVisitor = new FairNextClientVisitor();
+  currentVisitorNumber = 0;
+  queue_ = nullptr;
 }
 
 void Visualization::update(HWND hwnd, HDC hdc, int msecDelta) {
@@ -21,14 +26,29 @@ void Visualization::update(HWND hwnd, HDC hdc, int msecDelta) {
   SetDCBrushColor(hdc, RGB(0,0,255));
   MoveToEx(hdc, 50, 300, nullptr);
   LineTo(hdc, 950, 300);
+
+  if (queue_ != nullptr) {
+    FairNextClientVisitor *visitor = new FairNextClientVisitor();
+    QueueIterator iterator(queue_, visitor);
+    int index = 0;
+    while (*iterator != nullptr) {
+      const Client *client = *iterator;
+      int y = 280;
+      int x = 930 - index * 40;
+      Ellipse(hdc, x - 20, y - 20, x + 20, y + 20);
+      ++iterator;
+      ++index;
+    }
+    delete visitor;
+  }
   DeleteObject(pen);
 }
 
-void Visualization::queueUpdated(Queue *queue) {
+void Visualization::queueUpdated(const Queue *queue) {
   queue_ = queue;
 }
 
-void Visualization::nextClientSelected(Client *client) {
+void Visualization::nextClientSelected(const Client *client) {
   currentClient_ = client;
 }
 
@@ -36,6 +56,6 @@ void Visualization::progressUpdated(double progress) {
   progress_ = progress;
 }
 
-void Visualization::clientServed(Client *client) {
+void Visualization::clientServed(const Client *client) {
 
 }

@@ -41,6 +41,7 @@ LRESULT MessageHandler::Handle(HWND window_handle,
       return (LRESULT) 1;
     }
     case WM_PAINT: {
+      InvalidateRect(window_handle, nullptr, true);
       std::chrono::high_resolution_clock::time_point now = std::chrono::high_resolution_clock::now();
 
       std::chrono::duration<double, std::milli> time_span = now - lastUpdate;

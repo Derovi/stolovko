@@ -12,10 +12,10 @@ class IPresenter;
 
 class IView {
  public:
-  virtual void queueUpdated(Queue* queue) = 0;
-  virtual void nextClientSelected(Client* client) = 0;
+  virtual void queueUpdated(const Queue* queue) = 0;
+  virtual void nextClientSelected(const Client* client) = 0;
   virtual void progressUpdated(double progress) = 0;
-  virtual void clientServed(Client* client) = 0;
+  virtual void clientServed(const Client* client) = 0;
 };
 
 #endif  // IVIEW_H_

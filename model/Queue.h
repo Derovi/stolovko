@@ -13,6 +13,7 @@ class QueueVisitor;
 class Queue {
  public:
   void accept(QueueVisitor* visitor);
+  void accept(QueueVisitor* visitor) const;
 
   const std::set<Client*> &GetClients() const;
   void removeClient(Client* client);

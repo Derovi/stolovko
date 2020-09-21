@@ -8,7 +8,7 @@
 #include "QueueVisitor.h"
 class NextClientVisitor : public QueueVisitor {
  public:
-  virtual void visit(Queue *queue) = 0;
+  virtual void visit(const Queue *queue) = 0;
 
   Client *GetNextClient() const;
   void SetNextClient(Client *next_client);

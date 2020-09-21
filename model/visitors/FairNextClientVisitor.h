@@ -8,7 +8,7 @@
 #include "NextClientVisitor.h"
 class FairNextClientVisitor : public NextClientVisitor {
  public:
-  void visit(Queue *queue) override;
+  void visit(const Queue *queue) override;
 };
 
 #endif  // FAIRNEXTCLIENTVISITOR_H_

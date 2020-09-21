@@ -63,11 +63,11 @@ int View::startView(HINSTANCE instance_handle_arg, int n_cmd_show) {
   return 0;
 }
 
-void View::queueUpdated(Queue *queue) {
+void View::queueUpdated(const Queue *queue) {
   Logger::view("queue updated");
   messageHandler->GetVisualization()->queueUpdated(queue);
 }
-void View::nextClientSelected(Client *client) {
+void View::nextClientSelected(const Client *client) {
   Logger::view("client selected: " + std::to_string(client->GetIndex()));
   messageHandler->GetVisualization()->nextClientSelected(client);
 }
@@ -75,7 +75,7 @@ void View::progressUpdated(double progress) {
   Logger::view("progress updated: " + std::to_string(progress));
   messageHandler->GetVisualization()->progressUpdated(progress);
 }
-void View::clientServed(Client *client) {
+void View::clientServed(const Client *client) {
   Logger::view("client served: " + std::to_string(client->GetIndex()));
   messageHandler->GetVisualization()->clientServed(client);
 }

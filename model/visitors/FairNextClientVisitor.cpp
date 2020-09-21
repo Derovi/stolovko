@@ -3,7 +3,8 @@
 //
 
 #include "FairNextClientVisitor.h"
-void FairNextClientVisitor::visit(Queue *queue) {
+#include "../../Logger.h"
+void FairNextClientVisitor::visit(const Queue *queue) {
   if (queue->GetClients().empty()) {
     SetNextClient(nullptr);
     return;

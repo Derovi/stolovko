@@ -10,11 +10,11 @@
 #include "Queue.h"
 #include "visitors/NextClientVisitor.h"
 
-struct QueueIterator : std::iterator<std::forward_iterator_tag, Client> {
-  Queue* queue_;
+struct QueueIterator : std::iterator<std::forward_iterator_tag, Client*> {
+  const Queue* queue_;
   Client* cursor_;
   NextClientVisitor* next_client_visitor_;
-  QueueIterator(Queue* queue, NextClientVisitor* next_client_visitor) :
+  QueueIterator(const Queue* queue, NextClientVisitor* next_client_visitor) :
           queue_(queue), cursor_(nullptr), next_client_visitor_(next_client_visitor) {
     next_client_visitor_->SetCurrentClient(cursor_);
     queue_->accept(next_client_visitor_);
@@ -25,7 +25,7 @@ struct QueueIterator : std::iterator<std::forward_iterator_tag, Client> {
   QueueIterator(const QueueIterator&) = default;
   QueueIterator& operator=(const QueueIterator&) = default;
   ~QueueIterator() = default;
-  reference operator*() const { return *cursor_; }
+  const Client* operator*() const { return cursor_; }
   QueueIterator& operator++() {
     next_client_visitor_->SetCurrentClient(cursor_);
     queue_->accept(next_client_visitor_);
@@ -34,7 +34,5 @@ struct QueueIterator : std::iterator<std::forward_iterator_tag, Client> {
   }
   QueueIterator operator++(int) { auto old = *this; ++(*this); return old; }
 };
-
-void swap(QueueIterator& a, QueueIterator& b) { std::swap(a.cursor_, b.cursor_); }
 
 #endif  // QUEUE_ITERATOR_H_

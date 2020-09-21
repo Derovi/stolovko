@@ -8,7 +8,7 @@
 #include "../Context.h"
 
 void Presenter::start() {
-  Logger::presenter("started");
+
 }
 
 void Presenter::update(int msecDelta) {

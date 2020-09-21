@@ -6,21 +6,24 @@
 #define VISUALIZATION_H_
 
 #include "../model/Queue.h"
+#include "../model/visitors/NextClientVisitor.h"
 #include <windows.h>
 
 class Visualization {
  public:
   Visualization();
   void update(HWND hwnd, HDC hdc, int msecDelta);
-  void queueUpdated(Queue *queue);
-  void nextClientSelected(Client *client);
+  void queueUpdated(const Queue *queue);
+  void nextClientSelected(const Client *client);
   void progressUpdated(double progress);
-  void clientServed(Client *client);
+  void clientServed(const Client *client);
 
  private:
-  Queue* queue_;
-  Client* currentClient_;
+  const Queue* queue_;
+  const Client* currentClient_;
   double progress_;
+  NextClientVisitor* currentVisitor;
+  int currentVisitorNumber;
 };
 
 #endif  // VISUALIZATION_H_

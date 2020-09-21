@@ -8,7 +8,7 @@
 #include "../Queue.h"
 class QueueVisitor {
  public:
-  virtual void visit(Queue* queue) = 0;
+  virtual void visit(const Queue* queue) = 0;
 };
 
 #endif  // QUEUEVISITOR_H

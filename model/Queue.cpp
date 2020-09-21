@@ -25,3 +25,6 @@ Queue::~Queue() {
 void Queue::addClient(bool decent) {
   clients_.insert(new Client(++lastIndex_, decent));
 }
+void Queue::accept(QueueVisitor *visitor) const {
+  visitor->visit(this);
+}
